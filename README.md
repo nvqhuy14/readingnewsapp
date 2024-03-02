@@ -4,35 +4,37 @@
 
 ## Thành viên nhóm
 
-| MSSV  | Họ và tên |
-| ------------- | ------------- |
-| 20120339  | Nguyễn Nhật Nguyên  |
-| 20120393  | Huỳnh Minh Tú  |
-| 20120295  | Ngô Võ Quang Huy  |
-| 20120556  | Văn Đình Minh Quân  |
+| MSSV     | Họ và tên           |
+| -------- | ---------------------- |
+| 20120339 | Nguyễn Nhật Nguyên  |
+| 20120393 | Huỳnh Minh Tú        |
+| 20120295 | Ngô Võ Quang Huy     |
+| 20120556 | Văn Đình Minh Quân |
 
 ## Cài đặt và chạy project
 
 ### Bước 0: Cài đặt tool, các thư viện cần thiết
+
 **python 3.10.x**
+
 - Windows: https://www.python.org/downloads/windows/
 - Linux: https://www.python.org/downloads/source/
 - **Chọn cài pip trong lúc cài.**
 
 **npm (node packet manager)**
 
- - Để tránh gặp lỗi khi dùng node.js, chúng ta sẽ dùng nvm (node version manager) để cài node.js.
-    Windows: https://github.com/coreybutler/nvm-windows/releases
- - Tải file setup.exe về, rồi cài.
- - Sau đó mở command line (hoặc powershell) với admin mode rồi gõ các dòng lệnh sau: 
-    `nvm install 18.12.1` 
-    `nvm use 18.12.1`
-    
+- Để tránh gặp lỗi khi dùng node.js, chúng ta sẽ dùng nvm (node version manager) để cài node.js.
+  Windows: https://github.com/coreybutler/nvm-windows/releases
+- Tải file setup.exe về, rồi cài.
+- Sau đó mở command line (hoặc powershell) với admin mode rồi gõ các dòng lệnh sau:
+  `nvm install 18.12.1`
+  `nvm use 18.12.1`
+
  **vuejs**
- 
- - Mở commad line (hoặc powershell) và chạy các dòng lệnh sau:
-`npm install vue`
-`npm install -g @vue/cli`
+
+- Mở commad line (hoặc powershell) và chạy các dòng lệnh sau:
+  `npm install vue`
+  `npm install -g @vue/cli`
 
 **django rest framework**
 
@@ -56,7 +58,6 @@
 ```
 
 - Trong file `article_website/settings.py` thay đổi **USER, PASSWORD** giống với mySQL đang chạy trên máy của bạn
-
 - Trở lại terminal vscode, chạy các lệnh sau:
 
 ```
@@ -65,25 +66,23 @@ py manage.py migrate
 ```
 
 - Thêm data vào csdl ([data.sql](https://studenthcmusedu-my.sharepoint.com/:u:/g/personal/20120393_student_hcmus_edu_vn/EYHTs2KvJ_NHjPyPyx7O3WUBOjBcBop3aR5uKjHGv4Wu0Q?e=5u1jOZ))
-
 - Cuối cùng chạy lệnh `python manage.py runserver` trên terminal vscode để chạy server (mặc định ở port 8000)
 
 ### Bước 3: Setup Frontend
 
 - Dùng vscode để mở thự mục Frontend (tổng cộng có 3 chương trình vscode khác nhau: Backend, Frontend news-website, Frontend author-website)
-
 - Chạy Frontend `news-website` (Backend sau khi chạy sẽ ở port 8000 nên khi chạy frontend sẽ chọn port khác 8000)
+
 ```
 npm install \\chạy lệnh này lần đầu tiên khi clone project về, lần thứ 2 không cần chạy nữa
 npm run serve -- --port 3000 \\có thể thay đổi port
 ```
 
 - Chạy Frontend `author-website` trên port khác
+
 ```
 npm install \\chạy lệnh này lần đầu tiên khi clone project về, lần thứ 2 không cần chạy nữa
 npm run serve -- --port 4000 \\có thể thay đổi port
 ```
 
 **Note**: Cài đặt thêm [extension](https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc) này nếu trình duyệt chặn việc call API
-
-### Bước 4: Nếu cần thì thêm data article thông qua `author-website`
